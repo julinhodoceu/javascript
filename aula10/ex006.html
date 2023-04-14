@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+            div#area {
+        background-color: red;
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+
+    }
+
+    div#area2 {
+        background-color: rgb(68, 0, 255);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+
+    }
+
+    div#total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    </style>
+    <title>Eventos DOM</title>
+
+</head>
+<body>
+    <div id="total">
+    <div id="area" class="area">
+        INTERAJA
+    </div>
+    <div id="area2" class="area">
+        INTERAJA
+    </div>
+</div>
+
+<script>
+
+var a = window.document.getElementById('area')
+
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout',sair)
+
+    function clicar() {
+        a.innerText = 'Caiu na pegadinha bjs'
+        a.style.background = 'green'
+    }
+
+    function entrar() {
+        a.innerText = 'Passou a setinhah'
+    }
+
+    function sair () {
+        a.innerText = 'Tirou a setinher'
+        a.style.background = 'red'
+    }
+</script>
+</body>
+</html>
